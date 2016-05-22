@@ -1,0 +1,175 @@
+<html>
+<head>
+  <title>Treemap example</title>
+  <link rel='stylesheet' href='resources/jquery-ui.min.css' />
+  <link rel='stylesheet' href='resources/spectrum.min.css' />
+
+  <link rel="stylesheet" type="text/css" href="treemap.css">
+  <link rel="stylesheet" type="text/css" href="example1.css">
+
+  <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script src="resources/jquery-ui.min.js"></script>
+  <script src="resources/spectrum.min.js"></script>
+
+  <script src="example.json"></script>
+  <script src="treemap.js"></script>
+  <script>
+
+    function drawTreemap() {
+
+      var negativeRgb = $("#negativeColorpicker").val().match(/\d+/g);
+      var intermediateRgb = $("#intermediateColorpicker").val().match(/\d+/g);
+      var positiveRgb = $("#positiveColorpicker").val().match(/\d+/g);
+
+      var treemapParams = {
+        sortProperty: "colorValue",
+        sortOrder: "asc",
+        colorBounds: [
+          $("#negativeColorpicker").val(),
+          $("#intermediateColorpicker").val(),
+          $("#positiveColorpicker").val()
+        ]
+      };
+
+      treemapParams.sortProperty = $("#sortingSelector").val();
+      treemapParams.sortOrder = $("#sortingOrderSelector").val();
+
+      var htmlRendererConfig = {
+        rectangleClasses: ["rectangle"],
+        innerContentClasses: ["treemap-rectangle-inner-html"],
+        onrendered: function(rectangles) {
+            rectangles.forEach(function(rectangle) {
+              var r = $(rectangle);
+              if (rectangle.scrollHeight > rectangle.clientHeight) {
+                r.append($("<div class='whiteGradient' />"));
+              }
+              r.mouseenter(function() {
+                var originalHeight = r[0].style.height;
+                r.css("height", rectangle.scrollHeight);
+                r.find(".whiteGradient").hide();
+                r.css("z-index", 999);
+                r.mouseleave(function() {
+                  r.css("height", originalHeight);
+                  r.css("z-index", 0);
+                  $(rectangle).removeClass("animateRectangle");
+                  r.find(".whiteGradient").show();
+                  rectangle.onmouseleave = null;
+                  return false;
+                });
+                r.addClass("animateRectangle");
+                return false;
+              });
+            });
+        }
+      };
+
+      var canvasRendererConfig = {
+        rectanglePostRender: function(ctx, bounds, content) {
+          if (content.country) {
+            ctx.fillStyle = "black";
+            ctx.font = "18px serif";
+            ctx.strokeText(content.country, bounds.x + 5, bounds.y + 15);
+
+            if (content.flagImgSrc) {
+              let flagImage = new Image();
+              flagImage.onload = () => {
+                ctx.drawImage(flagImage, bounds.x + ctx.measureText(content.country).width + 8, bounds.y + 4, 20, flagImage.height * (20 / flagImage.width));
+              }
+              flagImage.src = content.flagImgSrc;
+            }
+          }
+        }
+      }
+
+      var config = {
+        data: window[$("#dataSource").val()],
+        treemapConfig: treemapParams,
+        render: "html",
+      };
+
+      config.render = $("#rendererSelector").val();
+
+      var treemapResizableWrapper = $("#resizable-wrapper");
+      var treemapContainer = $("#treemap-container");
+      treemapResizableWrapper.html(treemapContainer);
+      treemapContainer.empty();
+      if (treemapResizableWrapper.is('.ui-resizable')) {
+        treemapResizableWrapper.resizable('destroy');
+      }
+      treemapResizableWrapper.resizable();
+      switch (config.render) {
+        case "html":
+          config.renderConfig = htmlRendererConfig;
+          var htmlContainer = $("<div id='htmlContainer' />");
+          treemapContainer.append(htmlContainer)
+          htmlContainer.treemap(config);
+          break;
+        case "canvas":
+          config.renderConfig = canvasRendererConfig;
+          var canvasContainer = $("<canvas>").attr({id: "canvasContainer", width: treemapContainer.width(), height: treemapContainer.height()})
+            .css({width: '100%', height: '100%'});
+          treemapContainer.append(canvasContainer);
+          canvasContainer.treemap(config);
+          break;
+      }
+    }
+
+    window.onload = function() {
+      $("#negativeColorpicker").spectrum({
+        color: "#ff0000",
+        preferredFormat: "rgb"
+      });
+      $("#intermediateColorpicker").spectrum({
+        color: "#66ccff",
+        preferredFormat: "rgb"
+      });
+      $("#positiveColorpicker").spectrum({
+        color: "#00ff00",
+        preferredFormat: "rgb"
+      });
+      drawTreemap();
+    }
+  </script>
+</head>
+<body>
+  <div class="cfgSection">
+    <span>Data: </span><br/>
+    <select id="dataSource" onchange="drawTreemap();">
+      <option value="testData">Small data set</option>
+      <option value="bigTestData">Big data set</option>
+    </select>
+    <br/>
+    <span>Renderer: </span><br/>
+    <select id="rendererSelector" onchange="drawTreemap();">
+      <option value="html">HTML (div blocks)</option>
+      <option value="canvas">Canvas HTML5</option>
+    </select>
+    <br/>
+    <span>Sorting property: </span><br/>
+    <select id="sortingSelector" onchange="drawTreemap();">
+      <option value="colorValue">Color value</option>
+      <option value="sizeValue">Size value</option>
+      <option value="">As provided</option>
+    </select>
+    <br/>
+    <span>Sorting order: </span><br/>
+    <select id="sortingOrderSelector" onchange="drawTreemap();">
+      <option value="asc">Ascending</option>
+      <option value="dsc">Descending</option>
+    </select>
+    <br/>
+    <span>Negative color:</span><br/>
+    <input id='negativeColorpicker' onchange='drawTreemap();' value='rgb(255, 0, 0)'/>
+    <br/>
+    <span>Intermediate color:</span><br/>
+    <input id='intermediateColorpicker' onchange='drawTreemap();' value='rgb(102, 204, 255)'/>
+    <br/>
+    <span>Positive color:</span><br/>
+    <input id='positiveColorpicker' onchange='drawTreemap();' value='rgb(0, 255, 0)'/>
+  </div>
+  <span id="treemap-title"><b>Population growth over last couple years in different countries </b> </span> <br/>
+  <div id="resizable-wrapper" class="ui-widget-content">
+    <div id="treemap-container" />
+  </div>
+</body>
+</html>

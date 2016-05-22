@@ -1,0 +1,181 @@
+var testData = [{
+  sizeValue: 4298320,
+  colorValue: 8.45,
+  content: {
+    html: "Oman <img src='resources/220px-Flag_of_Oman.png' height='18px'> <br/> Population: " + 4298320 + " thounsands<br/> Population growth: " + 8.45 + "%",
+    country: "Oman",
+    flagImgSrc: "resources/220px-Flag_of_Oman.png"
+  }
+},
+{
+  sizeValue: 5851000,
+  colorValue: 5.99,
+  content: {
+    html: "Lebanon <img src='resources/218px-Flag_of_Lebanon.png' height='18px'> <br/> Population: " + 5851000 + " thounsands<br/> Population growth: " + 5.99 + "%",
+    country: "Lebanon",
+    flagImgSrc: "resources/218px-Flag_of_Lebanon.png"
+  }
+},
+{
+  sizeValue: 17064854,
+  colorValue: -2.27,
+  content: {
+    html: "Syria <img src='resources/218px-Flag_of_Syria.png' height='18px'> <br/> Population: " + 17064854 + " thounsands<br/> Population growth: " + -2.27 + "%",
+    country: "Syria",
+    flagImgSrc: "resources/218px-Flag_of_Syria.png"
+  }
+},
+{
+  sizeValue: 4187161,
+  colorValue: 4.81,
+  content: {
+    html: "Kuwait <img src='resources/220px-Flag_of_Kuwait.png' height='18px'> <br/> Population: " + 4187161 + " thounsands<br/> Population growth: " + 4.81 + "%",
+    country: "Kuwait",
+    flagImgSrc: "resources/220px-Flag_of_Kuwait.png"
+  }
+},
+{
+  sizeValue: 3729500,
+  colorValue: -1.21,
+  content: {
+    html: "Georgia <img src='resources/218px-Flag_of_Georgia.png' height='18px'> <br/> Population: " + 3729500 + " thounsands<br/> Population growth: " + -1.21 + "%",
+    country: "Georgia",
+    flagImgSrc: "resources/218px-Flag_of_Georgia.png"
+  }
+},
+{
+  sizeValue: 2881705,
+  colorValue: -1.63,
+  content: {
+    html: "Lithuania <img src='resources/Flag_of_Lithuania.png' height='18px'> <br/> Population: " + 2881705 + " thounsands<br/> Population growth: " + -1.63 + "%",
+    country: "Lithuania",
+    flagImgSrc: "resources/Flag_of_Lithuania.png"
+  }
+  }];
+
+  var bigTestData = [{
+    sizeValue: 4298320,
+    colorValue: 8.45,
+    content: {
+      html: "Oman <img src='resources/220px-Flag_of_Oman.png' height='18px'> <br/> Population: " + 4298320 + " thounsands<br/> Population growth: " + 8.45 + "%",
+      country: "Oman",
+      flagImgSrc: "resources/220px-Flag_of_Oman.png"
+    }
+  },
+  {
+    sizeValue: 5851000,
+    colorValue: 5.99,
+    content: {
+      html: "Lebanon <img src='resources/218px-Flag_of_Lebanon.png' height='18px'> <br/> Population: " + 5851000 + " thounsands<br/> Population growth: " + 5.99 + "%",
+      country: "Lebanon",
+      flagImgSrc: "resources/218px-Flag_of_Lebanon.png"
+    }
+  },
+  {
+    sizeValue: 17064854,
+    colorValue: -2.27,
+    content: {
+      html: "Syria <img src='resources/218px-Flag_of_Syria.png' height='18px'> <br/> Population: " + 17064854 + " thounsands<br/> Population growth: " + -2.27 + "%",
+      country: "Syria",
+      flagImgSrc: "resources/218px-Flag_of_Syria.png"
+    }
+  },
+  {
+    sizeValue: 4187161,
+    colorValue: 4.81,
+    content: {
+      html: "Kuwait <img src='resources/220px-Flag_of_Kuwait.png' height='18px'> <br/> Population: " + 4187161 + " thounsands<br/> Population growth: " + 4.81 + "%",
+      country: "Kuwait",
+      flagImgSrc: "resources/220px-Flag_of_Kuwait.png"
+    }
+  },
+  {
+    sizeValue: 3729500,
+    colorValue: -1.21,
+    content: {
+      html: "Georgia <img src='resources/218px-Flag_of_Georgia.png' height='18px'> <br/> Population: " + 3729500 + " thounsands<br/> Population growth: " + -1.21 + "%",
+      country: "Georgia",
+      flagImgSrc: "resources/218px-Flag_of_Georgia.png"
+    }
+  },
+  {
+    sizeValue: 2881705,
+    colorValue: -1.63,
+    content: {
+      html: "Lithuania <img src='resources/Flag_of_Lithuania.png' height='18px'> <br/> Population: " + 2881705 + " thounsands<br/> Population growth: " + -1.63 + "%",
+      country: "Lithuania",
+      flagImgSrc: "resources/Flag_of_Lithuania.png"
+    }
+  },
+  {
+    sizeValue: 2881705,
+    colorValue: -1.63,
+    content: {
+      html: "Lithuania <img src='resources/Flag_of_Lithuania.png' height='18px'> <br/> Population: " + 2881705 + " thounsands<br/> Population growth: " + -1.63 + "%",
+      country: "Lithuania",
+      flagImgSrc: "resources/Flag_of_Lithuania.png"
+    }
+  },
+  {
+    sizeValue: 2881705,
+    colorValue: -1.63,
+    content: {
+      html: "Lithuania <img src='resources/Flag_of_Lithuania.png' height='18px'> <br/> Population: " + 2881705 + " thounsands<br/> Population growth: " + -1.63 + "%",
+      country: "Lithuania",
+      flagImgSrc: "resources/Flag_of_Lithuania.png"
+    }
+  },
+  {
+    sizeValue: 2881705,
+    colorValue: -1.63,
+    content: {
+      html: "Lithuania <img src='resources/Flag_of_Lithuania.png' height='18px'> <br/> Population: " + 2881705 + " thounsands<br/> Population growth: " + -1.63 + "%",
+      country: "Lithuania",
+      flagImgSrc: "resources/Flag_of_Lithuania.png"
+    }
+  },
+  {
+    sizeValue: 2881705,
+    colorValue: -1.63,
+    content: {
+      html: "Lithuania <img src='resources/Flag_of_Lithuania.png' height='18px'> <br/> Population: " + 2881705 + " thounsands<br/> Population growth: " + -1.63 + "%",
+      country: "Lithuania",
+      flagImgSrc: "resources/Flag_of_Lithuania.png"
+    }
+  },
+  {
+    sizeValue: 2881705,
+    colorValue: -1.63,
+    content: {
+      html: "Lithuania <img src='resources/Flag_of_Lithuania.png' height='18px'> <br/> Population: " + 2881705 + " thounsands<br/> Population growth: " + -1.63 + "%",
+      country: "Lithuania",
+      flagImgSrc: "resources/Flag_of_Lithuania.png"
+    }
+  },
+  {
+    sizeValue: 2881705,
+    colorValue: -1.63,
+    content: {
+      html: "Lithuania <img src='resources/Flag_of_Lithuania.png' height='18px'> <br/> Population: " + 2881705 + " thounsands<br/> Population growth: " + -1.63 + "%",
+      country: "Lithuania",
+      flagImgSrc: "resources/Flag_of_Lithuania.png"
+    }
+  },
+  {
+    sizeValue: 2881705,
+    colorValue: -1.63,
+    content: {
+      html: "Lithuania <img src='resources/Flag_of_Lithuania.png' height='18px'> <br/> Population: " + 2881705 + " thounsands<br/> Population growth: " + -1.63 + "%",
+      country: "Lithuania",
+      flagImgSrc: "resources/Flag_of_Lithuania.png"
+    }
+  },
+  {
+    sizeValue: 2881705,
+    colorValue: -1.63,
+    content: {
+      html: "Lithuania <img src='resources/Flag_of_Lithuania.png' height='18px'> <br/> Population: " + 2881705 + " thounsands<br/> Population growth: " + -1.63 + "%",
+      country: "Lithuania",
+      flagImgSrc: "resources/Flag_of_Lithuania.png"
+    }
+    }];

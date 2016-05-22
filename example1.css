@@ -1,0 +1,62 @@
+#treemap-title {
+  position: absolute;
+  left: 150px;
+  top: 15px;
+}
+
+#treemap-container {
+  position: relative;
+  width: 97%;
+  height: 97%;
+}
+
+#resizable-wrapper {
+  position:absolute;
+  top: 35px;
+  left: 150px;
+  width: 600px;
+  height: 300px;
+}
+
+.treemap-rectangle-inner-html {
+  color: black;
+  font-size: 14px;
+  position: relative;
+  top: 10%;
+}
+
+.cfgSection {
+  position:absolute;
+  top:0;
+  left:0;
+  padding-left: 5px;
+  width:150px;
+  height:100%;
+}
+
+.rectangle {
+  position: absolute;
+  cursor: pointer;
+  overflow: hidden;
+  text-align: center;
+  border: 2px solid white;
+}
+
+.whiteGradient {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(255,0,0,0) 40%, white);
+}
+
+.animateRectangle {
+  animation: zoom 1s forwards;
+}
+
+@keyframes zoom {
+  100% {
+    transform: scale(1.2, 1.2);
+  }
+}
