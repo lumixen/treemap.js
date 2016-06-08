@@ -2,7 +2,7 @@ var testData = [{
   sizeValue: 4298320,
   colorValue: 8.45,
   content: {
-    html: "Oman <img src='resources/220px-Flag_of_Oman.png' height='18px'> <br/> Population: " + 4298320 + " thounsands<br/> Population growth: " + 8.45 + "%",
+    html: "Oman <img src='resources/220px-Flag_of_Oman.png' height='18px'> <br/> Population: " + 4298320 + " <br/> Population growth: " + 8.45 + "%",
     country: "Oman",
     flagImgSrc: "resources/220px-Flag_of_Oman.png"
   }
@@ -11,7 +11,7 @@ var testData = [{
   sizeValue: 5851000,
   colorValue: 5.99,
   content: {
-    html: "Lebanon <img src='resources/218px-Flag_of_Lebanon.png' height='18px'> <br/> Population: " + 5851000 + " thounsands<br/> Population growth: " + 5.99 + "%",
+    html: "Lebanon <img src='resources/218px-Flag_of_Lebanon.png' height='18px'> <br/> Population: " + 5851000 + " <br/> Population growth: " + 5.99 + "%",
     country: "Lebanon",
     flagImgSrc: "resources/218px-Flag_of_Lebanon.png"
   }
@@ -20,7 +20,7 @@ var testData = [{
   sizeValue: 17064854,
   colorValue: -2.27,
   content: {
-    html: "Syria <img src='resources/218px-Flag_of_Syria.png' height='18px'> <br/> Population: " + 17064854 + " thounsands<br/> Population growth: " + -2.27 + "%",
+    html: "Syria <img src='resources/218px-Flag_of_Syria.png' height='18px'> <br/> Population: " + 17064854 + " <br/> Population growth: " + -2.27 + "%",
     country: "Syria",
     flagImgSrc: "resources/218px-Flag_of_Syria.png"
   }
@@ -29,7 +29,7 @@ var testData = [{
   sizeValue: 4187161,
   colorValue: 4.81,
   content: {
-    html: "Kuwait <img src='resources/220px-Flag_of_Kuwait.png' height='18px'> <br/> Population: " + 4187161 + " thounsands<br/> Population growth: " + 4.81 + "%",
+    html: "Kuwait <img src='resources/220px-Flag_of_Kuwait.png' height='18px'> <br/> Population: " + 4187161 + " <br/> Population growth: " + 4.81 + "%",
     country: "Kuwait",
     flagImgSrc: "resources/220px-Flag_of_Kuwait.png"
   }
@@ -38,7 +38,7 @@ var testData = [{
   sizeValue: 3729500,
   colorValue: -1.21,
   content: {
-    html: "Georgia <img src='resources/218px-Flag_of_Georgia.png' height='18px'> <br/> Population: " + 3729500 + " thounsands<br/> Population growth: " + -1.21 + "%",
+    html: "Georgia <img src='resources/218px-Flag_of_Georgia.png' height='18px'> <br/> Population: " + 3729500 + " <br/> Population growth: " + -1.21 + "%",
     country: "Georgia",
     flagImgSrc: "resources/218px-Flag_of_Georgia.png"
   }
@@ -47,7 +47,7 @@ var testData = [{
   sizeValue: 2881705,
   colorValue: -1.63,
   content: {
-    html: "Lithuania <img src='resources/Flag_of_Lithuania.png' height='18px'> <br/> Population: " + 2881705 + " thounsands<br/> Population growth: " + -1.63 + "%",
+    html: "Lithuania <img src='resources/Flag_of_Lithuania.png' height='18px'> <br/> Population: " + 2881705 + " <br/> Population growth: " + -1.63 + "%",
     country: "Lithuania",
     flagImgSrc: "resources/Flag_of_Lithuania.png"
   }
@@ -57,7 +57,7 @@ var testData = [{
     sizeValue: 4298320,
     colorValue: 8.45,
     content: {
-      html: "Oman <img src='resources/220px-Flag_of_Oman.png' height='18px'> <br/> Population: " + 4298320 + " thounsands<br/> Population growth: " + 8.45 + "%",
+      html: "Oman <img src='resources/220px-Flag_of_Oman.png' height='18px'> <br/> Population: " + 4298320 + " <br/> Population growth: " + 8.45 + "%",
       country: "Oman",
       flagImgSrc: "resources/220px-Flag_of_Oman.png"
     }
@@ -66,7 +66,7 @@ var testData = [{
     sizeValue: 5851000,
     colorValue: 5.99,
     content: {
-      html: "Lebanon <img src='resources/218px-Flag_of_Lebanon.png' height='18px'> <br/> Population: " + 5851000 + " thounsands<br/> Population growth: " + 5.99 + "%",
+      html: "Lebanon <img src='resources/218px-Flag_of_Lebanon.png' height='18px'> <br/> Population: " + 5851000 + " <br/> Population growth: " + 5.99 + "%",
       country: "Lebanon",
       flagImgSrc: "resources/218px-Flag_of_Lebanon.png"
     }
@@ -75,7 +75,7 @@ var testData = [{
     sizeValue: 17064854,
     colorValue: -2.27,
     content: {
-      html: "Syria <img src='resources/218px-Flag_of_Syria.png' height='18px'> <br/> Population: " + 17064854 + " thounsands<br/> Population growth: " + -2.27 + "%",
+      html: "Syria <img src='resources/218px-Flag_of_Syria.png' height='18px'> <br/> Population: " + 17064854 + " <br/> Population growth: " + -2.27 + "%",
       country: "Syria",
       flagImgSrc: "resources/218px-Flag_of_Syria.png"
     }
@@ -84,7 +84,7 @@ var testData = [{
     sizeValue: 4187161,
     colorValue: 4.81,
     content: {
-      html: "Kuwait <img src='resources/220px-Flag_of_Kuwait.png' height='18px'> <br/> Population: " + 4187161 + " thounsands<br/> Population growth: " + 4.81 + "%",
+      html: "Kuwait <img src='resources/220px-Flag_of_Kuwait.png' height='18px'> <br/> Population: " + 4187161 + " <br/> Population growth: " + 4.81 + "%",
       country: "Kuwait",
       flagImgSrc: "resources/220px-Flag_of_Kuwait.png"
     }
@@ -93,7 +93,7 @@ var testData = [{
     sizeValue: 3729500,
     colorValue: -1.21,
     content: {
-      html: "Georgia <img src='resources/218px-Flag_of_Georgia.png' height='18px'> <br/> Population: " + 3729500 + " thounsands<br/> Population growth: " + -1.21 + "%",
+      html: "Georgia <img src='resources/218px-Flag_of_Georgia.png' height='18px'> <br/> Population: " + 3729500 + " <br/> Population growth: " + -1.21 + "%",
       country: "Georgia",
       flagImgSrc: "resources/218px-Flag_of_Georgia.png"
     }
@@ -102,7 +102,7 @@ var testData = [{
     sizeValue: 81459000,
     colorValue: 0.06,
     content: {
-      html: "Germany <img src='resources/220px-Flag_of_Germany.png' height='18px'> <br/> Population: " + 81459000 + " thounsands<br/> Population growth: " + 0.06 + "%",
+      html: "Germany <img src='resources/220px-Flag_of_Germany.png' height='18px'> <br/> Population: " + 81459000 + " <br/> Population growth: " + 0.06 + "%",
       country: "Germany",
       flagImgSrc: "resources/220px-Flag_of_Germany.png"
     }
@@ -111,7 +111,7 @@ var testData = [{
     sizeValue: 66689000,
     colorValue: 0.45,
     content: {
-      html: "France <img src='resources/218px-Flag_of_France.png' height='18px'> <br/> Population: " + 66689000 + " thounsands<br/> Population growth: " + 0.45 + "%",
+      html: "France <img src='resources/218px-Flag_of_France.png' height='18px'> <br/> Population: " + 66689000 + " <br/> Population growth: " + 0.45 + "%",
       country: "France",
       flagImgSrc: "resources/218px-Flag_of_France.png"
     }
@@ -120,7 +120,7 @@ var testData = [{
     sizeValue: 46423064,
     colorValue: -0.21,
     content: {
-      html: "Spain <img src='resources/218px-Flag_of_Spain.png' height='18px'> <br/> Population: " + 46423064 + " thounsands<br/> Population growth: " + -0.21 + "%",
+      html: "Spain <img src='resources/218px-Flag_of_Spain.png' height='18px'> <br/> Population: " + 46423064 + " <br/> Population growth: " + -0.21 + "%",
       country: "Spain",
       flagImgSrc: "resources/218px-Flag_of_Spain.png"
     }
@@ -129,7 +129,7 @@ var testData = [{
     sizeValue: 10955000,
     colorValue: -0.40,
     content: {
-      html: "Greece <img src='resources/218px-Flag_of_Greece.png' height='18px'> <br/> Population: " + 10955000 + " thounsands<br/> Population growth: " + -0.40 + "%",
+      html: "Greece <img src='resources/218px-Flag_of_Greece.png' height='18px'> <br/> Population: " + 10955000 + " <br/> Population growth: " + -0.40 + "%",
       country: "Greece",
       flagImgSrc: "resources/218px-Flag_of_Greece.png"
     }
@@ -138,7 +138,7 @@ var testData = [{
     sizeValue: 38483957,
     colorValue: 0.02,
     content: {
-      html: "Poland <img src='resources/220px-Flag_of_Poland.png' height='18px'> <br/> Population: " + 38483957 + " thounsands<br/> Population growth: " + 0.02 + "%",
+      html: "Poland <img src='resources/220px-Flag_of_Poland.png' height='18px'> <br/> Population: " + 38483957 + " <br/> Population growth: " + 0.02 + "%",
       country: "Poland",
       flagImgSrc: "resources/220px-Flag_of_Poland.png"
     }
@@ -147,7 +147,7 @@ var testData = [{
     sizeValue: 67959000,
     colorValue: 0.38,
     content: {
-      html: "Thailand <img src='resources/218px-Flag_of_Thailand.png' height='18px'> <br/> Population: " + 67959000 + " thounsands<br/> Population growth: " + 0.38 + "%",
+      html: "Thailand <img src='resources/218px-Flag_of_Thailand.png' height='18px'> <br/> Population: " + 67959000 + " <br/> Population growth: " + 0.38 + "%",
       country: "Thailand",
       flagImgSrc: "resources/218px-Flag_of_Thailand.png"
     }
@@ -156,7 +156,7 @@ var testData = [{
     sizeValue: 50801405,
     colorValue: 0.48,
     content: {
-      html: "South Korea <img src='resources/218px-Flag_of_South_Korea.png' height='18px'> <br/> Population: " + 50801405 + " thounsands<br/> Population growth: " + 0.48 + "%",
+      html: "South Korea <img src='resources/218px-Flag_of_South_Korea.png' height='18px'> <br/> Population: " + 50801405 + " <br/> Population growth: " + 0.48 + "%",
       country: "South Korea",
       flagImgSrc: "resources/218px-Flag_of_South_Korea.png"
     }
@@ -165,7 +165,7 @@ var testData = [{
     sizeValue: 10553443,
     colorValue: 0.07,
     content: {
-      html: "Czech Republic <img src='resources/218px-Flag_of_the_Czech_Republic.png' height='18px'> <br/> Population: " + 10553443 + " thounsands<br/> Population growth: " + 0.07 + "%",
+      html: "Czech Republic <img src='resources/218px-Flag_of_the_Czech_Republic.png' height='18px'> <br/> Population: " + 10553443 + " <br/> Population growth: " + 0.07 + "%",
       country: "Czech Republic",
       flagImgSrc: "resources/218px-Flag_of_the_Czech_Republic.png"
     }
@@ -174,7 +174,7 @@ var testData = [{
     sizeValue: 60674003,
     colorValue: 0.07,
     content: {
-      html: "Italy <img src='resources/218px-Flag_of_Italy.png' height='18px'> <br/> Population: " + 60674003 + " thounsands<br/> Population growth: " + 0.07 + "%",
+      html: "Italy <img src='resources/218px-Flag_of_Italy.png' height='18px'> <br/> Population: " + 60674003 + " <br/> Population growth: " + 0.07 + "%",
       country: "Italy",
       flagImgSrc: "resources/218px-Flag_of_Italy.png"
     }

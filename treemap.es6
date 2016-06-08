@@ -26,11 +26,8 @@ var treemapChart = {};
       ]
     }
 
-    set sortProperty(value) {
-      let isSortValueValid = false;
-      if (typeof value !='undefined') {
-        isSortValueValid = value == "sizeValue" || value == "colorValue";
-      }
+    set sortProperty(value = DEFAULT_SORT_PROPERTY) {
+      let isSortValueValid = value == "sizeValue" || value == "colorValue";
       if (!isSortValueValid) {
         return;
       }
@@ -41,16 +38,11 @@ var treemapChart = {};
       return this._sortProperty;
     }
 
-    set sortOrder(value) {
-      let isSortOrderValid = false;
-      if (typeof value != 'undefined') {
-        isSortOrderValid = value == "asc" || value == "dsc";
+    set sortOrder(value = DEFAULT_SORT_ORDER) {
+        if (value == "asc" || value == "dsc") {
+          this._sortOrder = value;
+        }
       }
-      if (!isSortOrderValid) {
-        return;
-      }
-      this._sortOrder = value;
-    }
 
     get sortOrder() {
       return this._sortOrder;
@@ -70,9 +62,9 @@ var treemapChart = {};
       return true;
     }
 
-    set colorBounds(value) {
-      if (typeof value == 'undefined' || !value || value.length == 0) {
-        console.log("One of the input color bounds parameter array is invalid");
+    set colorBounds(value = DEFAULT_COLOR_BOUNDS) {
+      if (value.length == 0) {
+        console.log("Input color bounds parameter array is invalid");
         this._colorBounds = DEFAULT_COLOR_BOUNDS;
       }
       for (let i = 0; i < value.length; i++) {
